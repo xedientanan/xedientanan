@@ -149,30 +149,50 @@ section{
 04 HEADER
 ==========================================================*/
 
-header{
-
-    background:#fff;
-
-    box-shadow:var(--shadow);
-
-    position:relative;
-
-    z-index:999;
-
+header {
+    background: #fff;
+    box-shadow: var(--shadow);
+    position: relative;
+    z-index: 999;
 }
 
-.header{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:20px 0;
-
+/* 1. Giới hạn khoảng cách chung của header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0; /* Giảm padding trên dưới từ 20px xuống 10px */
 }
 
+/* 2. Giới hạn kích thước logo */
+.header .logo img,
+.header img {
+    max-height: 70px; /* Khống chế chiều cao tối đa của logo (bạn có thể chỉnh từ 60px - 80px) */
+    width: auto;      /* Tự động điều chỉnh chiều rộng theo tỉ lệ */
+    object-fit: contain;
+}
+
+/* 3. Căn chỉnh tên thương hiệu / slogan kế bên hoặc xung quanh */
+.header .brand-info, 
+.header-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header h1, 
+.header .title {
+    font-size: 22px;  /* Chỉnh cỡ chữ tên XE ĐIỆN TÂN AN */
+    font-weight: bold;
+    margin: 0;
+}
+
+.header p, 
+.header .subtitle {
+    font-size: 13px;  /* Chỉnh cỡ chữ dòng mô tả bên dưới */
+    color: #666;
+    margin-top: 4px;
+}
 .logo{
 
     display:flex;
@@ -183,25 +203,28 @@ header{
 
 }
 
+.logo{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
 .logo img{
-
-    width:50px;
-
-    height:50px;
-
+    width:130px;
+    height:130px;
     border-radius:50%;
-   object-fit:cover;
-
+    object-fit:cover;
 }
 
 .logo h1{
-
     font-size:34px;
-
-    color:var(--primary);
-
+    color:#333;
     font-weight:900;
+    margin:0;
+}
 
+.logo p{
+    margin:5px 0 0;
 }
 
 .logo p{
