@@ -498,14 +498,15 @@ BUTTON
 
 .hero{
 
-    background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-                url("../images/hero/banner-1.png");
+    position: relative;
 
-    background-size: cover;
+    min-height: 700px;
 
-    background-position: center;
+    background:
+    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+    url("../images/hero/banner-1.png") center center/cover no-repeat;
 
-    background-repeat: no-repeat;
+    overflow: hidden;
 
 }
 
@@ -517,31 +518,25 @@ BUTTON
 
     inset:0;
 
-    background:linear-gradient(
+    background:rgba(0,0,0,.15);
 
-        90deg,
-
-        rgba(0,0,0,.72),
-
-        rgba(0,0,0,.25),
-
-        rgba(0,0,0,.05)
-
-    );
+    z-index:1;
 
 }
 
 .hero-content{
 
+    position:absolute;
+
+    left:80px;
+
+    bottom:60px;
+
     max-width:600px;
 
-    padding-top:380px;
-
-    padding-bottom:60px;
-
-    position:relative;
-
     z-index:2;
+
+    color:#fff;
 
 }
 
