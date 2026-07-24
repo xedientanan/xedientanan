@@ -536,20 +536,21 @@ BUTTON
 06 HERO
 ==========================================================*/
 
-.hero{
-
+.hero {
     position: relative;
-
-    min-height: 700px;
-
-    background:
-    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
-    url("../images/hero/banner-1.png") center center/cover no-repeat;
-
+    width: 100%;
+    
+    /* Vừa đảm bảo tỉ lệ ảnh chuẩn, vừa hiển thị toàn bộ không bị mất nét/mất hình */
+    background: 
+        linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.15)), 
+        url("../images/hero/banner-1.png") center/contain no-repeat;
+    
+    /* Dùng padding-top theo % tỉ lệ ảnh thay vì min-height cố định */
+    /* Nếu banner của bạn dạng chữ nhật nằm ngang chuẩn tỉ lệ 16:9, dùng 35% - 45% là đẹp nhất */
+    padding-top: 38%; 
+    height: 0;
     overflow: hidden;
-
 }
-
 /*.hero::before{
 
     content:"";
