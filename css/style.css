@@ -156,97 +156,113 @@ header {
     z-index: 999;
 }
 
-/* 1. Giới hạn khoảng cách chung của header */
+/* Khung chứa chính: Căn tất cả phần tử trên 1 hàng ngang */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0; /* Giảm padding trên dưới từ 20px xuống 10px */
+    padding: 12px 0;
+    gap: 20px;
 }
 
-/* 2. Giới hạn kích thước logo */
-.header .logo img,
-.header img {
-    max-height: 70px; /* Khống chế chiều cao tối đa của logo (bạn có thể chỉnh từ 60px - 80px) */
-    width: auto;      /* Tự động điều chỉnh chiều rộng theo tỉ lệ */
-    object-fit: contain;
-}
-
-/* 3. Căn chỉnh tên thương hiệu / slogan kế bên hoặc xung quanh */
-.header .brand-info, 
-.header-title {
+/* --- LOGO & THƯƠNG HIỆU --- */
+.logo {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0; /* Giữ nguyên kích thước logo, không bị bóp nghẹt */
+}
+
+.logo img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo h1 {
+    font-size: 22px;
+    color: #333;
+    font-weight: 900;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.logo p {
+    font-size: 12px;
+    color: #666;
+    margin: 4px 0 0 0;
+}
+
+/* --- TÌM KIẾM & HOTLINE (KHỐI BÊN PHẢI) --- */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+/* --- SEARCH BOX --- */
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+    overflow: hidden;
+    background: #fff;
+    width: 100%;
+    max-width: 420px; /* Giới hạn độ rộng tối đa của ô tìm kiếm */
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 18px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-box button {
+    width: 55px;
+    height: 42px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-.header h1, 
-.header .title {
-    font-size: 22px;  /* Chỉnh cỡ chữ tên XE ĐIỆN TÂN AN */
-    font-weight: bold;
-    margin: 0;
+.search-box button:hover {
+    background: var(--primary-dark);
 }
 
-.header p, 
-.header .subtitle {
-    font-size: 13px;  /* Chỉnh cỡ chữ dòng mô tả bên dưới */
-    color: #666;
-    margin-top: 4px;
-}
-.logo{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:18px;
-
+/* --- HOTLINE --- */
+.hotline {
+    flex-shrink: 0; /* Giữ nút hotline cố định, không bị vỡ */
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:20px;
+.hotline a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--yellow);
+    color: #111;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    white-space: nowrap; /* Không cho chữ/số bị rớt xuống dòng */
+    transition: 0.3s;
+    text-decoration: none;
 }
 
-.logo img{
-    width:130px;
-    height:130px;
-    border-radius:50%;
-    object-fit:cover;
+.hotline a:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
 }
-
-.logo h1{
-    font-size:34px;
-    color:#333;
-    font-weight:900;
-    margin:0;
-}
-
-.logo p{
-    margin:5px 0 0;
-}
-
-.logo p{
-
-    color:#666;
-
-    margin-top:5px;
-
-}
-
-.header-right{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:25px;
-
-}
-
-
-
 /*==========================================================
 SEARCH
 ==========================================================*/
