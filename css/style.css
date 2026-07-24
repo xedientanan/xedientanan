@@ -2249,7 +2249,117 @@ RESPONSIVE 480
 
 }
 
+/*==========================================================
+COUNTER
+==========================================================*/
 
+.counter{
+
+    background:linear-gradient(135deg,#009245,#006B33);
+
+    color:white;
+
+    padding:90px 0;
+
+}
+
+.counter .section-title h2{
+
+    color:white;
+
+}
+
+.counter .section-title p{
+
+    color:#e7e7e7;
+
+}
+
+.counter-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:35px;
+
+}
+
+.counter-box{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    text-align:center;
+
+    backdrop-filter:blur(8px);
+
+    transition:.35s;
+
+}
+
+.counter-box:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(255,255,255,.14);
+
+}
+
+.counter-box i{
+
+    font-size:58px;
+
+    color:#FFD400;
+
+    margin-bottom:22px;
+
+}
+
+.counter-box h3{
+
+    font-size:54px;
+
+    color:#FFD400;
+
+    margin-bottom:10px;
+
+    font-weight:900;
+
+}
+
+.counter-box span{
+
+    font-size:20px;
+
+    font-weight:600;
+
+}
+
+@media(max-width:992px){
+
+.counter-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.counter-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
 
 /*==========================================================
 END
