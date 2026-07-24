@@ -533,17 +533,15 @@ BUTTON
 
 .hero-content{
 
+    max-width:600px;
+
+    padding-top:320px;
+
+    padding-bottom:60px;
+
     position:relative;
 
-    z-index:5;
-
-    width:95%;
-
-    max-width:1300px;
-
-    margin:auto;
-
-    color:white;
+    z-index:2;
 
 }
 
