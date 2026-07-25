@@ -1,1 +1,31 @@
 
+[
+  {
+    "id": 1,
+    "slug": "yadea-vekoo",
+    "name": "YADEA VEKOO",
+    "category": "xe-dap-dien",
+    "brand": "YADEA",
+    "price": "17.900.000 ₫",
+    "image": "images/yadea-vekoo.jpg",
+    "battery": "Lithium 48V24Ah",
+    "distance": "80 km",
+    "speed": "40 km/h",
+    "warranty": "36 tháng",
+    "description": "Xe đạp điện YADEA VEKOO sử dụng pin Lithium, thiết kế hiện đại."
+  },
+  {
+    "id": 2,
+    "slug": "dk-samurai",
+    "name": "DK Samurai",
+    "category": "xe-dap-dien",
+    "brand": "DK Bike",
+    "price": "15.500.000 ₫",
+    "image": "images/dk-samurai.jpg",
+    "battery": "48V20Ah",
+    "distance": "70 km",
+    "speed": "35 km/h",
+    "warranty": "24 tháng",
+    "description": "Xe điện DK Bike phù hợp học sinh và sinh viên."
+  }
+]
